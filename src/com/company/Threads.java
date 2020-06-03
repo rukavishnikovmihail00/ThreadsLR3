@@ -17,7 +17,7 @@ public class Threads extends Thread{
         //this.id = id;
     }
     @Override
-    public synchronized void run(){
+    public void run(){
         for (int i = 0; i < this.stageNumber; i++) {
             Rand rand = new Rand();
             com.company.State state = StateFactory.getState(rand.randomInt2String(1, stateNumber), this.lenght);
